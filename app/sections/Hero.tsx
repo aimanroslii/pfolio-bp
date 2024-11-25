@@ -1,9 +1,21 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import { MoveDown } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  // This will trigger the visibility after the component mounts
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+  
   return (
-    <div className="py-32 md:py-48 lg:py-60">
+    <div className={`py-32 md:py-48 lg:py-60 transition-transform duration-1000 ease-out ${
+      isVisible ? "transform translate-y-0 opacity-100" : "transform translate-y-20 opacity-0"
+    }`} >
       <div className="container">
         <div className=" mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">

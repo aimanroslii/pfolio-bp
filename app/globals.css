@@ -110,6 +110,12 @@
     }
 }
 
+@layer utilities {
+  .container {
+    @apply lg:max-w-5xl;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
