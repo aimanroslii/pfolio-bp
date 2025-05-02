@@ -26,7 +26,7 @@ export default function Hero() {
             Muhammad Aiman Rosli
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg lg:text-xl">
-            I&apos;m a software engineer with 4 years of experience specializing
+            I&apos;m a software engineer with 5 years of experience specializing
             in full-stack web development. On the front end, I work extensively
             with React, while on the back end, I leverage technologies like
             Java, C#, and TypeScript, using frameworks such as Micronaut, Spring
