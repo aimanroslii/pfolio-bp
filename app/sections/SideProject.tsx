@@ -37,36 +37,37 @@ export default function SideProjects() {
         <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
           Side Projects
         </h2>
-        <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
+        {/* <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
           See how I transformed concepts into engaging digital experiences.
-        </p>
+        </p> */}
         <div className="flex flex-col mt-10 gap-20 md:mt-20">
           {portfolioProjects.map((project) => (
             <div
               key={project.title}
-              className="bg-gray-800 rounded-3xl relative z-0  overflow-hidden after:z-10 
-                after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline 
-                after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 
-                md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none"
+              className="bg-gray-100/70 backdrop-blur-md rounded-3xl relative z-0 overflow-hidden 
+              border border-gray-300 shadow-md hover:shadow-xl transition-all px-8 pt-8 
+              md:pt-12 md:px-10 lg:pt-16 lg:px-20"
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
                   <h3 className="font-serif text-2xl md:text-4xl md:mt-5 mt-2">
                     {project.title}
                   </h3>
-                  <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
-                  <p className="flex gap-2 text-sm md:text-base text-white/50 mt-5">
+                  <hr className="border-t border-gray-300 mt-4 md:mt-5" />
+                  <p className="flex gap-2 text-sm md:text-base text-gray-700 mt-5 leading-relaxed">
                     {project.results}
                   </p>
+                  <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 mt-8">
                   <Link
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="w-full md:w-auto"
                   >
                     <Button
-                      className="bg-white text-gray-950 h-12 w-full md:w-auto
-                    px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8
-                    hover:bg-white/70 hover:text-gray-900"
+                      className="bg-gray-900 text-white h-12 md:h-14 w-full md:w-auto px-8 rounded-xl 
+                 font-semibold inline-flex items-center justify-center gap-2 
+                 hover:bg-gray-800 hover:scale-[1.02] transition-all duration-300 shadow-md"
                     >
                       <span>Visit Live Site</span>
                       <MoveUpRight className="size-4" />
@@ -76,16 +77,20 @@ export default function SideProjects() {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="w-full md:w-auto"
                   >
                     <Button
-                      className="border border-white/15 hover:bg-white/10 hover:text-white transition duration-300 h-12 md:h-14 w-full md:w-auto
-                    px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8
-                     md:ml-4 lg:ml-8"
+                      className="bg-gray-100/70 text-gray-900 border border-gray-300 h-12 md:h-14 w-full md:w-auto 
+                 px-8 rounded-xl font-semibold inline-flex items-center justify-center gap-2
+                 hover:bg-gray-200 hover:border-gray-400 hover:scale-[1.02]
+                 transition-all duration-300 shadow-sm"
                     >
                       <span>Github Link</span>
                       <Github className="size-4" />
                     </Button>
                   </Link>
+                  </div>
+                  
                 </div>
                 <div className="relative">
                   <Image

@@ -6,6 +6,7 @@ import MainProjects from "./sections/MainProject";
 import ProjectSection from "./sections/Projects";
 import SideProjects from "./sections/SideProject";
 import SkillSection from "./sections/Skills";
+import VideoIntro from "./sections/VideoIntro";
 
 
 export default function Home() {
@@ -13,10 +14,11 @@ export default function Home() {
     <div>
        <Header />
        <Hero />
+       <VideoIntro/>
        <SkillSection />
        <MainProjects />
        <SideProjects />
-       <ContactSection />
+       {/* <ContactSection /> */}
        <FooterSection />
     </div>
   );
