@@ -65,7 +65,7 @@ const workingProjects = [
 
 export default function MainProjects() {
   return (
-    <section className="pb-16 lg:py-24 mt-10" id="projects">
+    <section className="pb-16 lg:py-24 mt-10" id="experiences">
       <div className="container">
         <div className="flex justify-center">
           {/* <p className="uppercase text-center font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
