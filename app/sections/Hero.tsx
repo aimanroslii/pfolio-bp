@@ -43,7 +43,7 @@ export default function Hero() {
               <MoveDown className="size-4" />
             </Button>
           </Link>
-          <Link href="https://www.linkedin.com/in/aiman-r-455523329/" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.linkedin.com/in/muhd-aiman-r-7abb49199/" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gray-100/70 text-gray-900 border border-gray-300 h-12 md:h-14 w-full md:w-auto 
                  px-8 rounded-xl font-semibold inline-flex items-center justify-center gap-2
                  hover:bg-gray-200 hover:border-gray-400 hover:scale-[1.02]

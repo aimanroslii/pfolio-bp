@@ -9,7 +9,7 @@ const footerLinks = [
   },
   {
     title: "LinkedIn",
-    href: "https://www.linkedin.com/in/aiman-r-455523329/",
+    href: "https://www.linkedin.com/in/muhd-aiman-r-7abb49199/",
   },
 ];
 
