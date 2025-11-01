@@ -1,3 +1,6 @@
+"use client";
+
+import { logAction } from "@/app/action";
 import { Button } from "@/components/ui/button";
 import { MoveUpRight } from "lucide-react";
 import Link from "next/link";
@@ -26,6 +29,7 @@ export default function FooterSection() {
                 key={links.title}
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-white hover:text-black/70 hover:underline cursor-pointer"
+                onClick={() => logAction("footerLinks-click")}
               >
                 <Button className="bg-gray-900 text-white px-5 py-2 rounded-xl font-semibold 
                              inline-flex items-center gap-2 hover:bg-gray-800 hover:scale-[1.02]

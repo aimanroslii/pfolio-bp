@@ -1,3 +1,5 @@
+"use client"
+
 import firstLandingPage from "@/assets/images/first_landingPage.png";
 import secondLandingPage from "@/assets/images/second_landingPage.png";
 import thirdLandingPage from "@/assets/images/third_landingPage.jpg";
@@ -5,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { CircleCheckBig, MoveUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { logAction } from "@/app/action";
 
 const portfolioProjects = [
   {
@@ -92,7 +95,7 @@ export default function ProjectSection() {
                       </li>
                     ))}
                   </ul>
-                  <Link href={project.link}>
+                  <Link href={project.link} onClick={() => logAction("visitLiveSite-click")}>
                     <Button
                       className="bg-white text-gray-950 h-12 w-full md:w-auto
                   px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8"

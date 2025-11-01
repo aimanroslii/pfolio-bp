@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useState } from "react"
 import { Button } from "@/components/ui/button";
+import { logAction } from "@/app/action";
 
 
 export default function VideoIntro() {
@@ -37,7 +38,7 @@ export default function VideoIntro() {
                                 size="sm"
                                 className="rounded-md px-3 py-1" // small rounded rectangle
                                 variant={language === "EN" ? "default" : "outline"}
-                                onClick={() => setLanguage("EN")}
+                                onClick={() => {setLanguage("EN"); logAction("language-EN-click");}}
                             >
                                 EN
                             </Button>
@@ -45,7 +46,7 @@ export default function VideoIntro() {
                                 size="sm"
                                 className="rounded-md px-3 py-1" // small rounded rectangle
                                 variant={language === "DE" ? "default" : "outline"}
-                                onClick={() => setLanguage("DE")}
+                                onClick={() => {setLanguage("DE"); logAction("language-DE-click");}}
                             >
                                 DE
                             </Button>

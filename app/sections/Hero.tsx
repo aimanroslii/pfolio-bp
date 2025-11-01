@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MoveDown } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { logAction } from "@/app/action";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +36,7 @@ export default function Hero() {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <Link href="#projects">
+          <Link href="#projects" onClick={() => logAction("exploreMyWork-click")}>
             <Button className="bg-gray-900 text-white h-12 md:h-14 w-full md:w-auto px-8 rounded-xl 
                  font-semibold inline-flex items-center justify-center gap-2 
                  hover:bg-gray-800 hover:scale-[1.02] transition-all duration-300 shadow-md">
@@ -43,7 +44,7 @@ export default function Hero() {
               <MoveDown className="size-4" />
             </Button>
           </Link>
-          <Link href="https://www.linkedin.com/in/muhd-aiman-r-7abb49199/" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.linkedin.com/in/muhd-aiman-r-7abb49199/" target="_blank" rel="noopener noreferrer" onClick={() => logAction("letsConnect-click")}>
             <Button className="bg-gray-100/70 text-gray-900 border border-gray-300 h-12 md:h-14 w-full md:w-auto 
                  px-8 rounded-xl font-semibold inline-flex items-center justify-center gap-2
                  hover:bg-gray-200 hover:border-gray-400 hover:scale-[1.02]

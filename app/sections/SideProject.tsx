@@ -1,5 +1,9 @@
+"use client";
+
 import smDashboard from "@/assets/images/soleMaster_dashboard.png";
 import smStorefront from "@/assets/images/soleMaster_storefront.png";
+import { logAction } from "@/app/action";
+
 
 import { Button } from "@/components/ui/button";
 import { CircleCheckBig, Github, MoveUpRight } from "lucide-react";
@@ -63,6 +67,7 @@ export default function SideProjects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full md:w-auto"
+                    onClick={() => logAction("visitLiveSite-click")}
                   >
                     <Button
                       className="bg-gray-900 text-white h-12 md:h-14 w-full md:w-auto px-8 rounded-xl 
@@ -78,6 +83,7 @@ export default function SideProjects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full md:w-auto"
+                    onClick={() => logAction("githubLink-click")}
                   >
                     <Button
                       className="bg-gray-100/70 text-gray-900 border border-gray-300 h-12 md:h-14 w-full md:w-auto 
