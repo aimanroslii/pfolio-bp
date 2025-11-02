@@ -61,9 +61,9 @@ export default async function Dashboard() {
         <div className="grid gap-4 md:gp-8 lg:grid-row-2 xl:grid-row-3 mt-10">
         <Card className="">
           <CardHeader>
-            <CardTitle>Request</CardTitle>
+            <CardTitle>User Request</CardTitle>
             <CardDescription>
-              Recent Request
+              Recent request last 30 days
             </CardDescription>
           </CardHeader>
           <CardContent>
