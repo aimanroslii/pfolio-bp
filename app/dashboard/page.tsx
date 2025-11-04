@@ -14,6 +14,7 @@ import { revalidatePath } from "next/cache";
 import { RefreshWrapper } from "../components/dashboard/RefreshWrapper";
 
 // export const revalidate = 0;
+export const dynamic = "force-dynamic";
 
 async function getData() {
   const now = new Date();
@@ -75,31 +76,6 @@ export default async function Dashboard() {
             <Chart data={data} />
           </CardContent>
         </Card>
-        
-        {/* Can create for more insights */}
-        {/* <Card className="">
-          <CardHeader>
-            <CardTitle>Request</CardTitle>
-            <CardDescription>
-              Recent Request
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Chart data={data} />
-          </CardContent>
-        </Card>
-
-        <Card className="">
-          <CardHeader>
-            <CardTitle>Request</CardTitle>
-            <CardDescription>
-              Recent Request
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Chart data={data} />
-          </CardContent>
-        </Card> */}
       </div>
       </RefreshWrapper>
         </>
