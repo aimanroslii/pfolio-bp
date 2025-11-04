@@ -10,6 +10,10 @@ import {
 import { Chart } from "../components/dashboard/Chart";
 import prisma from "../lib/db";
 import { addDays, formatISO, parseISO } from "date-fns";
+import { revalidatePath } from "next/cache";
+import { RefreshWrapper } from "../components/dashboard/RefreshWrapper";
+
+// export const revalidate = 0;
 
 async function getData() {
   const now = new Date();
@@ -58,6 +62,7 @@ export default async function Dashboard() {
 
     return (
         <>
+        <RefreshWrapper>
         <div className="grid gap-4 md:gp-8 lg:grid-row-2 xl:grid-row-3 mt-10">
         <Card className="">
           <CardHeader>
@@ -96,6 +101,7 @@ export default async function Dashboard() {
           </CardContent>
         </Card> */}
       </div>
+      </RefreshWrapper>
         </>
     )
 }
